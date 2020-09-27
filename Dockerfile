@@ -6,4 +6,5 @@ COPY . .
 RUN npm run build
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/dist/frontendNG /usr/share/nginx/html
